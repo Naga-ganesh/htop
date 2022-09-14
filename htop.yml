@@ -1,9 +1,0 @@
----
-  - name: 
-    hosts: localhost
-    become: yes
-    tasks:
-      - name:
-        apt:
-          name: htop
-          state: present
