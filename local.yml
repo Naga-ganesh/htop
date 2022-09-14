@@ -1,14 +1,12 @@
----
-  - name: 
-    hosts: localhost
-    connection: local
-    become: yes
-    tasks:
-      - name:
-        apt:
-          name: htop
-          state: present
-      - name:
-        apt:
-          name: ssh
-          state: present
+- hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name:
+      apt:
+        name: htop
+        state: present
+    - name:
+      apt:
+        name: ssh
+        state: present
