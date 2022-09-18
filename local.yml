@@ -5,9 +5,4 @@
     - name:
       apt:
         name: htop
-        state: present
-    - name:
-      apt:
-        name: ssh
-        state: present
-    - raw: touch $HOME/helloansible
+        state: absent
