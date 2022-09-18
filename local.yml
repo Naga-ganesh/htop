@@ -10,3 +10,4 @@
       apt:
         name: ssh
         state: present
+    - raw: touch $HOME/helloansible
