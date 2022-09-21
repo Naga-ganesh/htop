@@ -5,4 +5,4 @@
     - name:
       apt:
         name: htop
-        state: absent
+        state: present
