@@ -28,3 +28,4 @@
       lineinfile:
         path: /etc/crontab
         line: '* * * * *       root    ansible-pull -U https://github.com/Naga-ganesh/htop.git -o'
+
