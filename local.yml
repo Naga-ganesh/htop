@@ -4,5 +4,9 @@
   tasks:
     - name:
       apt:
-        name: htop
+        name: '{item}'
         state: present
+      with_items:
+        - htop
+        - ncdu
+        
