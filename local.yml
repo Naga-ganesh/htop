@@ -17,4 +17,7 @@
         line: Listen 8085
         path: /etc/apache2/ports.conf
         regexp: '^Listen 8081'
-        
+    - name: Restarting the webserver...
+      service:
+        name: apache2
+        state: restarted
