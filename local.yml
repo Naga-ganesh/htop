@@ -12,7 +12,7 @@
         - apache2
 
     - name: Configuring webserver
-      raw: echo "hello world" >> /var/www/html/index.html
+      raw: echo "hello world" > /var/www/html/index.html
 
     - name: Configuring the apache2 server from port 80 to 8085.
       lineinfile:
