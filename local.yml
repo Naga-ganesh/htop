@@ -12,16 +12,14 @@
         - apache2
 
     - name: Configuring webserver
-      lineinfile:
-        path: /var/www/html/index.html
-        line: Hello world
+      raw: echo "hello world" >> /var/www/html/index.html
 
-    - name: Configuring the apache2 server from port 80 to 8081.
+    - name: Configuring the apache2 server from port 80 to 8085.
       lineinfile:
         path: /etc/apache2/ports.conf
         regexp: '^Listen 80'
         line: Listen 8085
-        
+
     - name: Restarting the webserver...
       service:
         name: apache2
