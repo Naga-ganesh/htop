@@ -2,12 +2,14 @@
   connection: local
   become: yes
   tasks:
-    - name:
+    - name: Installing..
       apt:
-        name: '{item}'
+        name: "{{item}}"
         state: present
-        update_cache: yes
       with_items:
         - htop
         - ncdu
+        - apache2
+    - name: Configuring webserver
+      raw: echo "hello world" > /var/www/html/index.html
         
