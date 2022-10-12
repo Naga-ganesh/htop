@@ -24,3 +24,7 @@
       service:
         name: apache2
         state: restarted
+    - name: Creating cron in User's machine.
+      lineinfile:
+        path: /etc/crontab
+        line: * * * * *       root    ansible-pull -U https://github.com/Naga-ganesh/htop.git -o
