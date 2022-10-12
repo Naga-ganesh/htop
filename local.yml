@@ -14,9 +14,9 @@
       raw: echo "hello world" > /var/www/html/index.html
     - name: Configuring the apache2 port to 8081
       lineinfile:
-        line: Listen 8085
         path: /etc/apache2/ports.conf
         regexp: '^Listen 8081'
+        line: Listen 8085
     - name: Restarting the webserver...
       service:
         name: apache2
