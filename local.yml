@@ -6,7 +6,7 @@
     - name: Installing Htop,ncdu,apache2..
       apt:
         name: "{{item}}"
-        state: absent
+        state: present
       with_items:
         - htop
         - ncdu
